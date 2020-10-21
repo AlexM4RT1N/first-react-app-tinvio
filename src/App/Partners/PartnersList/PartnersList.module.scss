@@ -1,0 +1,28 @@
+.partnersList {
+  display: flex;
+  justify-content: space-evenly;
+  overflow-x: scroll;
+  width: 120%;
+  transform: translateX(-10%);
+  .partnersItem {
+    width: 124px;
+    height: 77px;
+    min-width: 124px;
+    min-height: 77px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    &:first-child {
+      border-left: 50px solid transparent;
+    }
+    &:last-child {
+      border-right: 50px solid transparent;
+    }
+
+    .itemLogo {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

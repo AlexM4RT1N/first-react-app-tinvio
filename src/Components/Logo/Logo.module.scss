@@ -1,0 +1,13 @@
+.appLogo {
+  min-width: 120px;
+  min-height: 48px;
+  max-width: 120px;
+  max-height: 48px;
+  position: relative;
+  z-index: 100;
+  background: url(../../images/logo-color.svg) center no-repeat;
+  background-size: contain;
+  &.header {
+    margin-right: 14px;
+  }
+}

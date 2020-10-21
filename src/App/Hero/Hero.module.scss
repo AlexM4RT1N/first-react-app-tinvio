@@ -1,0 +1,14 @@
+.hero {
+  width: 100%;
+  padding-top: 132px;
+  position: relative;
+  
+  background-image: linear-gradient(to top, white 356px, #eceff1 356px);
+  @media (min-width: 768px) {
+    background-image: linear-gradient(to top, white 369px, #eceff1 369px);
+    padding-top: 200px;
+  }
+  @media (min-width: 1024px) {
+    background-image: linear-gradient(to top, white 510px, #eceff1 510px);
+  }
+}

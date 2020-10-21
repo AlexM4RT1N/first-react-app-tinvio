@@ -1,0 +1,24 @@
+.container {
+  padding:0 20px 35px;
+  width: 100%;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1440px;
+  @media (min-width: 768px) {
+    padding: 0 30px 50px;
+  }
+  &.header {    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 0 20px;
+    @media (min-width: 768px) {
+      padding: 0 30px;
+      justify-content: flex-start;    
+    }
+  }
+  &.hero {
+
+  }
+}

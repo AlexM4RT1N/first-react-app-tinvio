@@ -1,0 +1,19 @@
+.SectionTitle {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  color: #21272e;
+  padding: 0 10px;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    font-size: 40px;
+  }
+  &.hero {
+    max-width: 700px;
+    margin-bottom: 48px;
+    @media (min-width: 768px) {
+      margin-bottom: 100px;
+    }
+  }
+}

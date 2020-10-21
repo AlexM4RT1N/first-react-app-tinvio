@@ -1,0 +1,50 @@
+.BoxesFruits {
+  display: flex;
+  height: 550px;
+  width: calc(100% + 60px);
+  transform: translate(-30px);
+  margin-top: 72px;
+  .Boxes {
+    background: url(../../../images/Hero/Boxes.png) 98% center no-repeat;
+    background-size: cover;
+    width: 55%;
+    position: relative;
+    z-index: 2;
+    margin-right: -5%;
+  }
+  .Fruits {
+    width: 50%;
+    background: url(../../../images/Hero/Fruits.png) left no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+  }
+  @media (min-width: 650px) {
+    .Boxes,
+    .Fruits {
+      background-size: contain;
+    }
+  }
+  @media (min-width: 768px) {
+    margin-top: 0;
+    position: absolute;
+    height: 520px;
+    top: 120px;
+    left: 0;
+    justify-content: space-around;
+    .Boxes,
+    .Fruits {
+      background-size: cover;
+      background-position: center;
+    }
+    .Boxes{
+      width: 365px;
+      transform: translateX(-62%);
+    }
+    .Fruits {
+      width: 300px;
+      height: 490px;
+      transform: translateX(48%);
+    }
+  }
+}
