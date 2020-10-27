@@ -1,20 +1,19 @@
 .WrapHomePageImg {
   width: 100%;
+  margin-bottom: 16px;
   .HomePageImg {
-    height: 384px;
+    height: 430px;
     width: 120%;
     background: url(../../../images/Hero/Home-page_with-shadow.png) left no-repeat;
     background-size: cover;
-    max-width: 646px;
-    @media (min-width: 705px) {
-      width: 100%;
-      margin: 0 auto;
-    }
+    max-width: 711px;    
   }
-
+  
   @media (min-width: 768px) {
     padding-top: 74px;
     .HomePageImg {
+      width: 100%;
+      margin: 0 auto;
       background-size: contain;
       background-position: center;
     }

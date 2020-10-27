@@ -1,0 +1,34 @@
+.communication {
+  width: 100%;
+  padding-top: 30px;
+  margin-bottom: 52px;
+  background: #f3f5f6;
+  .wrapBtn {
+    display: flex;
+    justify-content: space-between;
+    width: calc(128px + 128px + 24px);
+    margin: 0 auto 30px;
+  }
+  .wrapSlides {
+    text-align: center;
+    .imgSlides {
+      height: 75vw;
+      width: 75vw;
+      min-width: 330px;
+      object-fit: contain;
+      object-position: center;
+      margin: 0 auto 10px;
+      @media (min-width: 768px) {
+        
+      }
+    }
+    .titleSlides {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.67;
+      text-align: center;
+      color: #21272e;
+      margin-bottom: 15px;
+    }
+  }
+}

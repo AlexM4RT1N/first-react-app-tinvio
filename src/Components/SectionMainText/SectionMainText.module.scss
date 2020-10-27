@@ -1,0 +1,13 @@
+.sectionMainText {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.67;
+  text-align: center;
+  color: #787c80;
+
+  &.sectionSlider {
+  }
+  &.screenMobile{
+    margin-bottom: 56px;
+  }
+}

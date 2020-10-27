@@ -1,10 +1,11 @@
 .SectionTitle {
   font-size: 28px;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.4;
   text-align: center;
   color: #21272e;
-  padding: 0 10px;
+  padding: 0 8px;
+  letter-spacing: 0.5px;
   margin: 0 auto;
   @media (min-width: 768px) {
     font-size: 40px;
@@ -21,5 +22,35 @@
     @media (min-width: 768px) {
       margin-bottom: 65px;
     }
+  }
+  &.sectionSlider {
+    margin-bottom: 20px;
+    @media (min-width: 768px) {
+      margin-bottom: 45px;
+    }
+  }
+  &.communication {
+    margin-bottom: 28px;
+    @media (min-width: 768px) {
+      margin-bottom: 45px;
+    }
+  }
+  &.screenMobile {
+    margin-bottom: 22px;
+    @media (min-width: 768px) {
+      margin-bottom: 45px;
+    }    
+  }
+  &.simpleSteps {
+    margin-bottom: 52px;
+    @media (min-width: 768px) {
+      margin-bottom: 45px;
+    }    
+  }
+  &.sectionForm {
+    margin-bottom: 52px;
+    @media (min-width: 768px) {
+      margin-bottom: 45px;
+    }    
   }
 }

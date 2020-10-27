@@ -6,4 +6,9 @@
     display: block;
     text-align: center;
   }
+  &.form {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
 }

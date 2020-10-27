@@ -3,14 +3,15 @@
   height: 550px;
   width: calc(100% + 60px);
   transform: translate(-30px);
-  margin-top: 72px;
+  margin-top: 77px;
+  margin-bottom: 50px;
   .Boxes {
     background: url(../../../images/Hero/Boxes.png) 98% center no-repeat;
     background-size: cover;
-    width: 55%;
+    width: 69%;
     position: relative;
     z-index: 2;
-    margin-right: -5%;
+    transform: translateX(10px);
   }
   .Fruits {
     width: 50%;
@@ -18,8 +19,9 @@
     background-size: cover;
     position: relative;
     z-index: 1;
+    transform: translate(-13px, 50px);
   }
-  @media (min-width: 650px) {
+  @media (min-width: 710px) {
     .Boxes,
     .Fruits {
       background-size: contain;

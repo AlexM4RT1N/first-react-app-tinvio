@@ -3,7 +3,7 @@
   width: 100%;
   margin: 0 auto;
   min-width: 320px;
-  max-width: 1440px;
+  max-width: 1280px;
   @media (min-width: 768px) {
     padding: 0 30px 50px;
   }
@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
     height: 85px;
-    padding: 0 20px;
+    padding: 0 15px;
     @media (min-width: 768px) {
       padding: 0 30px;
       justify-content: flex-start;    

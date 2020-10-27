@@ -11,7 +11,13 @@ const btn = (props) => {
   }   
 
   return (
-    <button className={addClasses.join(' ')} >{props.text}</button>
+    <button className={addClasses.join(' ')} 
+      onClick={props.communicationClicked}
+      >
+
+      {props.text}
+
+    </button>
   );
 };
 

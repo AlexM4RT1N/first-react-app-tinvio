@@ -1,0 +1,40 @@
+.step {
+  .img {
+    width: 57px;
+    height: 56px;
+    object-fit: contain;
+    margin: 0 auto 20px;
+  }
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #21272e;
+    margin-bottom: 14px;
+  }
+  .text {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #787c80;
+    margin: 0 auto 24px;
+  }
+  &:nth-child(2) {
+    .text {
+      max-width: 230px;
+    }
+  }
+  &:not(:last-child) {
+    .text {
+      &::after {
+        content: '';
+        display: block;
+        margin: 24px auto 0;
+        width: 2px;
+        height: 56px;
+        opacity: 0.1;
+        background-color: #21272e;
+      }
+    }
+  }
+}
