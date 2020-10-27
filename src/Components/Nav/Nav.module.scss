@@ -73,4 +73,27 @@
       }
     }
   }
+  &.footer {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    .nav__list {
+      align-items: center;
+      flex-flow: column;
+      display: flex;
+      padding-left: 0px;
+      border-left: 1px solid transparent;
+      .nav__item {
+        font-size: 12px;
+        padding: 17px 14px;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          color: #3897ff;
+        }
+      }
+    }
+  }
 }

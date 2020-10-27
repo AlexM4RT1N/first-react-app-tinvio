@@ -32,7 +32,7 @@ class Header extends Component {
 
           <Logo assignClasses={['header']} />
               
-          <Nav items={this.state.items} assignClasses={['header', this.state.classAvtive]} />        
+          <Nav btn={true} items={this.state.items} assignClasses={['header', this.state.classAvtive]} />        
 
           <Burger clicked={() => this.burgerActive()} assignClasses={[this.state.classAvtive]} />
 

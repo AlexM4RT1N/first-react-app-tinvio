@@ -22,8 +22,9 @@ const nav = (props) => {
           })
         }
       </ul> 
-
-      <Btn text={'Get started'} assignClasses={['nav']} />
+        { 
+          props.btn ? <Btn text={'Get started'} assignClasses={['nav']} /> : null
+        }
 
     </div>
   );
