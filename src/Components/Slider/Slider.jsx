@@ -10,36 +10,46 @@ class Slider extends Component {
     slider: {
       currentSlide: 0,
     } 
-  }  
+  }
+
+  prevSlide = () => this.setState({slider: {currentSlide: this.state.slider.currentSlide - 1}})
+
+  nextSlide = () => this.setState({slider: {currentSlide: this.state.slider.currentSlide + 1}})
+
   
 
 
   render() {
     const {slides} = this.props;
+    const currentSlide = this.state.slider.currentSlide;
 
     return (
       <div className={classes.slider}>
 
         <div className={classes.underWave}></div>
 
-        <ImagesOverlay slides={slides}/>
+        <ImagesOverlay slides={slides} currentSlide={currentSlide}/>
 
         <div className={classes.sliderNav}>
-          <div className={classes.prevSlide}></div>
+
+          <div onClick={this.prevSlide} className={`${classes.prevSlide} ${currentSlide === 0 ? classes['inactive'] : ''}`}></div>
+
           <ul className={classes.sliderDots}>
-            <li className={classes.dotsItem}></li>
-            <li className={classes.dotsItem}></li>
-            <li className={classes.dotsItem}></li>
+            <li className={`${classes.dotsItem} ${currentSlide === 0 ? classes['active'] : ''}`}></li>
+            <li className={`${classes.dotsItem} ${currentSlide === 1 ? classes['active'] : ''}`}></li>
+            <li className={`${classes.dotsItem} ${currentSlide === 2 ? classes['active'] : ''}`}></li>
           </ul>
-          <div className={classes.nextSlide}></div>
+
+          <div onClick={this.nextSlide} className={`${classes.nextSlide} ${currentSlide === slides.length-1 ? classes['inactive'] : ''}`}></div>
+
         </div>
           
         <SectionTitle assignClasses={['sectionSlider']}>
-        {slides[this.state.slider.currentSlide].title}
+          {slides[currentSlide].title}
         </SectionTitle>
 
         <SectionMainText assignClasses={['sectionSlider']}>
-          {slides[this.state.slider.currentSlide].text}
+          {slides[currentSlide].text}
         </SectionMainText>
 
       </div>

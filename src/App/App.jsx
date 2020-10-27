@@ -13,8 +13,8 @@ import './App.scss';
 
 class App extends Component {
 
-  render() {
-
+  
+  render() { 
     return (
       <div className="App">
         <Header />

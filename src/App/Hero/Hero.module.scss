@@ -12,4 +12,14 @@
   @media (min-width: 1024px) {
     background-image: linear-gradient(to top, white 510px, #f3f5f6 510px);
   }
+  &:before {
+    content: '';
+    display: block;
+    background: #f3f5f6;
+    width: 100%;
+    position: absolute;
+    top: 84px;
+    height: 1px;
+    z-index: 5;
+  }
 }

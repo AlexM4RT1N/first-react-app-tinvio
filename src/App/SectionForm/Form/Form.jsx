@@ -22,10 +22,22 @@ class Form extends Component {
           <h3 className={classes.formTitle}>Hi, we are Tinvio! And you?</h3>
 
           <div className={classes.wrapInputs}>
-            <input className={classes.inputName} name='name' type="text" placeholder='Name' required/>
-            <input className={classes.inputBusinessName} name='name' type="text" placeholder='Business Name' required/>
-            <input className={classes.inputCode} type="tel" name="code-country" placeholder='+65' required/>
-            <input className={classes.inputTel} type="tel" name="phone"  required/>
+            <div className={`${classes.inputName} ${classes.input}`}>
+              <input name='name' id='name' type="text" placeholder='Name' required/>              
+              <label htmlFor="name">Name</label>
+            </div>
+            <div className={`${classes.inputBusinessName} ${classes.input}`}>
+              <input name='businessName' id='businessName' type="text" placeholder='Business Name' required/>
+              <label htmlFor="name">Business Name</label>
+            </div>
+            <div className={`${classes.inputCode} ${classes.input}`}>
+              <input type="tel" name="code-country" id='code-country' placeholder='+65' required/>
+              <label htmlFor="name">Code</label>
+            </div>
+            <div className={`${classes.inputTel} ${classes.input}`}>
+              <input type="tel" name="phone" id='phone'  required/>
+              <label htmlFor="name">Phone</label>
+            </div>
           </div>
 
           <Btn assignClasses={['form']} text={'Get Started'} />

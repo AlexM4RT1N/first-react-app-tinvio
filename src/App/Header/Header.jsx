@@ -26,8 +26,9 @@ class Header extends Component {
 
 
   render() {
+
     return (
-      <header className="header">
+      <header className="header" >
         <Container assignClasses={['header']}>
 
           <Logo assignClasses={['header']} />
