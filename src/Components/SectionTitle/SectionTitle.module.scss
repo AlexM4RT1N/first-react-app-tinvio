@@ -14,19 +14,34 @@
     max-width: 700px;
     margin-bottom: 48px;
     @media (min-width: 768px) {
-      margin-bottom: 100px;
+      margin-bottom: 113px;
+      min-width: 732px;
+      transform: translateX(-12px);
+      letter-spacing: 0.8px;
+    }
+    @media (min-width: 1024px) {
+      margin-bottom: 50px;
+      min-width: 732px;
+      transform: translateX(-12px);
+      letter-spacing: 0.8px;
     }
   }
   &.partners {
     margin-bottom: 25px;
     @media (min-width: 768px) {
       margin-bottom: 65px;
+      font-size: 34px;
+      letter-spacing: -0.3px;
     }
   }
   &.sectionSlider {
     margin-bottom: 16px;
     @media (min-width: 768px) {
-      margin-bottom: 45px;
+      margin-bottom: 20px;
+      font-size: 34px;
+      letter-spacing: -0.4px;
+      padding: 16px 35px 0 0;
+      text-align: left;
     }
   }
   &.communication {
@@ -35,23 +50,54 @@
     @media (min-width: 768px) {
       margin-bottom: 45px;
     }
+    @media (min-width: 1024px) {
+      margin:0 auto 40px 0;
+      
+    }
   }
   &.screenMobile {
     margin-bottom: 22px;
+    width: 100%;
+    text-align: center;
     @media (min-width: 768px) {
-      margin-bottom: 45px;
+      margin-bottom: 22px;
+      font-size: 34px;
+      letter-spacing: -0.3px;
+    }    
+    @media (min-width: 1024px) {
+      max-width: 500px;
+      width: 50%;
+      text-align: left;
+      margin-bottom: 22px;
+      font-size: 34px;
+      letter-spacing: -0.3px;
     }    
   }
   &.simpleSteps {
     margin-bottom: 62px;
     @media (min-width: 768px) {
-      margin-bottom: 45px;
+      margin-bottom: 85px;
+      font-size: 34px;
+      letter-spacing: -0.3px;
     }    
   }
   &.sectionForm {
     margin-bottom: 52px;
+    max-width: 520px;
     @media (min-width: 768px) {
-      margin-bottom: 45px;
+      margin-bottom: 72px;
+      font-size: 34px;
+      letter-spacing: -0.3px;
+      max-width: 550px;
+      position: relative;
+    }    
+    @media (min-width: 1024px) {
+      margin-bottom: 72px;
+      font-size: 42px;     
+      max-width: 380px;
+      text-align: left;
+      padding: 0;
+      margin: 0 auto 72px 0;
     }    
   }
 }

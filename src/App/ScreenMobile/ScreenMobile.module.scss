@@ -1,5 +1,21 @@
 .screenMobile {
+  position: relative;
   .screensList {
     padding: 0px 27px;
+    @media (min-width:1024px) {
+      padding: 0px 6px;
+      width: 100%;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+    }
+    @media (min-width:1280px) {
+      padding: 0px 28px;
+      width: 100%;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+    }
   }
+  
 }

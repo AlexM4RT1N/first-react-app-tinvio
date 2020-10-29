@@ -6,6 +6,7 @@
   border-radius: 46.8px;
   background-color: #e1eff0;
   margin: 0 auto 48px;
+  position: relative;
   .wrapImg {
     padding: 15px 8px 0;
     transform: translate(-14%, 20px);
@@ -14,12 +15,19 @@
     }
   }
   .wrapDescr {
+    padding:0 0 8px 0;      
+    @media (min-width:430px) {
+      padding:0 0 18px 0;      
+    }
     .describe {
       opacity: 0.4;
       font-size: 14px;
       font-weight: 600;
       text-align: center;
       color: #21272e;
+      @media (min-width:430px) {
+        font-size: 18px;     
+      }
       &::after {
         content: '';
         display: block;
@@ -37,6 +45,60 @@
           background: url(../../../images/Screens/arrow.svg);
         }
       }
+    }
+  }
+  @media (min-width:768px) {
+    margin: 0 auto 97px;
+    border-radius: 65px;
+    .wrapImg {
+      padding: 30px 6px 0;
+      transform: translate(-13%, 20px);
+      margin-bottom: -14px;
+    }
+    .wrapDescr {
+      padding-bottom: 15px;
+      .describe {
+        font-size: 19px;
+        
+      }
+    }
+  }
+  @media (min-width:1024px) {
+    margin: 0 auto 0px;
+    border-radius: 45px;
+    &:not(:last-child) {
+      margin-right: 47px;
+    }
+    .wrapImg {
+      padding: 14px 6px 0;
+      margin-bottom: -14px;
+    }
+    .wrapDescr {
+      padding:0 0 26px 18px;
+      .describe {
+        font-size: 15px;
+        &::after {          
+          content: '';
+          display: inline-block;
+          margin: 0 0 0 4px;
+          width: 24px;
+          height: 24px;          
+          transform: translateY(6px);
+        }
+        &.arrow {
+          &::after {
+            transform: translateY(8px) rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+  @media (min-width:1280px) {
+    &:not(:last-child) {
+      margin-right: 42px;
+    }
+    .wrapDescr {
+      padding:0 0 36px 18px;
     }
   }
 }

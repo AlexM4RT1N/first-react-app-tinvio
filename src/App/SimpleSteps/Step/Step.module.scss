@@ -40,4 +40,23 @@
       }
     }
   }
+  @media (min-width: 1024px) {
+    width: 32%;
+    position: relative;
+    .img {
+      margin: 0 auto 36px;
+    }
+    &:not(:last-child) {
+      .text {
+        &::after {
+          position: absolute;
+          top: 28px;
+          right: -122px;
+          margin: 0;
+          width: 224px;
+          height: 2px;
+        }
+      }
+    }
+  }
 }

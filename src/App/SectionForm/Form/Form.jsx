@@ -8,16 +8,21 @@ import classes from './Form.module.scss';
 class Form extends Component {
 
   state = {
+    active: false
   }  
 
 
   render() {
+    const { id, modalFormClicked, modalAcvtive, classModal } = this.props;
 
     return (
-      <div className={classes.wrapForm}>
+      <div className={`${classes.wrapForm} ${classes[classModal]} ${classes[modalAcvtive]}`}>
         <DescrWithArrow text={'Let’s get to know each other'} arrow={'left'} />
+
         
-        <form className={classes.form} action="#">
+        <form id={id} className={classes.form} action="#">
+
+          <div onClick={modalFormClicked} className={classes.closeModalForm}></div>
 
           <h3 className={classes.formTitle}>Hi, we are Tinvio! And you?</h3>
 
@@ -45,6 +50,7 @@ class Form extends Component {
           <TextNearBtn  assignClasses={['form']}>No spam, promise 🙌</TextNearBtn>
 
         </form>
+        <div onClick={modalFormClicked} className={classes.closeOverlayModal}></div>
       </div>
     );
   }

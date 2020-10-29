@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import OverlayWave from '../../Components/OverlayWave/OverlayWave';
 import Container from '../../Components/Container/Container';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import SectionMainText from '../../Components/SectionMainText/SectionMainText';
 import Screen from './Screen/Screen';
 
 import classes from './ScreenMobile.module.scss';
+
 
 class ScreenMobile extends Component {
 
@@ -22,7 +24,11 @@ class ScreenMobile extends Component {
     return (
       <section className={classes.screenMobile}>
         <Container assignClasses={['screenMobile']}>
+
+          <OverlayWave assignClasses={['screenMobile']} />
           
+          <OverlayWave assignClasses={['screenMobileTwo']} />
+
           <SectionTitle assignClasses={['screenMobile']}>
             Seamless Ordering Experience
           </SectionTitle>

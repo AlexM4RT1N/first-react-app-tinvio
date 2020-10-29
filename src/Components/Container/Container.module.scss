@@ -14,30 +14,95 @@
     height: 85px;
     padding: 0 15px;
     @media (min-width: 768px) {
-      padding: 0 30px;
+      padding: 0 75px 0 65px;
       justify-content: flex-start;    
     }
   }
   &.hero {
-
+    padding: 122px 30px 50px;
+    @media (min-width: 768px) {
+      padding: 197px 30px 50px;
+    }
+    @media (min-width: 1024px) {
+      padding: 197px 0px 50px;
+    }
+    @media (min-width: 1280px) {
+      position: relative;
+    }
   }
   &.partners {
-    padding:0 20px 43px;
+    padding: 0px 20px 43px;
+    @media (min-width: 768px) {
+      padding: 5px 20px 43px;
+    }
   }
   &.sectionSlider {
     padding:0 37px 68px;
+    @media (min-width: 768px) {
+      padding: 43px 68px 50px;
+    }
+    @media (min-width: 1024px) {
+      padding: 61px 78px 88px;
+    }
+    @media (min-width: 1280px) {
+      position: relative;
+    }
   }
   &.communication {
-    padding: 32px 20px 60px;
+    padding: 62px 20px 60px;
+    @media (min-width: 768px) {
+      padding: 75px 20px 75px;
+    }
+    @media (min-width: 1024px) {
+      padding: 96px 20px 75px 86px;
+      display: flex;
+      flex-flow: column wrap;
+      height: 559px;
+    }
   }
   &.screenMobile {
-    padding: 60px 20px 46px;
+    padding: 90px 20px 46px;
+    @media (min-width: 768px) {
+      padding: 90px 20px 126px;
+    }
+    @media (min-width: 1024px) {
+      padding: 122px 62px 126px;
+      display: flex;
+      flex-flow: row wrap;
+    }
+    @media (min-width: 1280px) {
+      padding: 122px 96px 144px;
+      display: flex;
+      flex-flow: row wrap;
+    }
   }
   &.simpleSteps {
     padding: 78px 24px 60px;
+    @media (min-width: 768px) {
+      padding: 70px 24px 66px;
+    }
+    @media (min-width: 1024px) {
+      padding: 70px 7px 66px;
+    }
+    @media (min-width: 1280px) {
+      padding: 70px 64px 66px;
+    }
   }
   &.sectionForm {
     padding: 72px 24px 86px;
+    @media (min-width: 768px) {
+      padding: 105px 24px 80px;
+    }
+    @media (min-width: 1024px) {
+      padding: 105px 46px 80px;
+      position: relative;
+      height: 793px;
+      display: flex;
+      flex-flow: column wrap;
+    }
+    @media (min-width: 1280px) {
+      padding: 105px 128px 80px;
+    }
   }
 
   &.footer {
@@ -46,5 +111,16 @@
     align-items: center;
     justify-content: center;
     padding: 48px 24px 20px;
+    @media (min-width: 768px) {
+      padding: 47px 30px 57px;
+      flex-flow: row wrap;
+      justify-content: start;
+    }
+    @media (min-width: 1024px) {
+      padding: 50px 30px 20px;      
+    }
+    @media (min-width: 1280px) {
+      padding: 50px 62px 20px;      
+    }
   }
 }

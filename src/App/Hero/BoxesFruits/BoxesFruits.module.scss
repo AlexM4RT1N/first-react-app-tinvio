@@ -30,9 +30,9 @@
   @media (min-width: 768px) {
     margin-top: 0;
     position: absolute;
-    height: 520px;
-    top: 120px;
-    left: 0;
+    height: 555px;
+    top: 124px;
+    left: -5px;
     justify-content: space-around;
     .Boxes,
     .Fruits {
@@ -40,13 +40,29 @@
       background-position: center;
     }
     .Boxes{
-      width: 365px;
+      width: 394px;
       transform: translateX(-62%);
     }
     .Fruits {
-      width: 300px;
-      height: 490px;
-      transform: translateX(48%);
+      width: 315px;
+      height: 530px;
+      transform: translate(52%, -3%);
+    }
+  }
+  @media (min-width: 1024px) {       
+    .Boxes{
+      transform: translateX(-70%);
+    }
+    .Fruits {
+      transform: translate(68%, -3%);
+    }
+  }
+  @media (min-width: 1280px) {       
+    .Boxes{
+      transform: translateX(-62%);
+    }
+    .Fruits {
+      transform: translate(60%, -3%);
     }
   }
 }

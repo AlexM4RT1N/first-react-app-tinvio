@@ -1,11 +1,63 @@
 .sectionForm {
   width: 100%;
+  position: relative;
+  .overlayBalls {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    .ball {
+      border-radius: 50%;
+      background-color: cadetblue;
+      position: absolute;
+      &:nth-child(1) {
+        width: 426px;
+        height: 426px;
+        top: 58px;
+        left: -132px;
+        background: #eff0f5;
+      }
+      &:nth-child(2) {
+        width: 256px;
+        height: 256px;
+        left: 331px;
+        top: 242px;
+        background: #f8e9e4;
+      }
+      &:nth-child(3) {
+        width: 188px;
+        height: 188px;
+        top: 505px;
+        left: 190px;
+        background: #f3efef;
+      }
+      &:nth-child(4) {
+        width: 144px;
+        height: 144px;
+        top: 518px;
+        left: -34px;
+        background: #e0eeef;
+      }
+      &:nth-child(5) {
+        width: 96px;
+        height: 96px;
+        top: 687px;
+        left: 102px;
+        background: #f0eef9;
+      }
+    }
+    @media (min-width:768px) {
+      display: block;
+    }
+  }
 }
 
 .descrWithArrow {
   position: relative;
   padding: 30px 0;
-  margin-bottom: 7px;
+  margin: 0 auto 7px;
+  max-width: 307px;
   .descrWithArrowImg {
     position: absolute;
     top: -14px;
@@ -32,6 +84,23 @@
       padding-left: 23px;
     }
   }
+  @media (min-width:768px) {
+    left: -48px;
+    margin: 0 auto 13px;
+    &.right {
+      margin: -25px auto 0;
+      left: 71px;
+    }
+  }
+  @media (min-width:1024px) {
+    left: -38px;
+    margin: 0 auto 43px;
+    &.right {
+      margin: -25px auto 0 0;
+      left: -23px;
+            
+    }
+  }
 }
 
 .wrapCountryList {
@@ -56,7 +125,17 @@
         display: inline-block;
         margin-right: 6px;
       }
-
+    }
+    @media (min-width:768px) {
+      padding: 13px 10px 17px 30px;
+    }
+    
+  }
+  @media (min-width:1024px) {
+    width: auto;
+    .countryList {
+      position: relative;
+      margin: 0;
     }
   }
 }

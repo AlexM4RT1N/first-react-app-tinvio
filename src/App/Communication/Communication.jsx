@@ -56,13 +56,11 @@ class Communication extends Component {
             <Btn communicationClicked={() => this.after()} text={'AFTER'} assignClasses={['communication', this.state.slide.after]} />
           </div>
 
-          <div className={classes.wrapSlides}>
-            <img className={classes.imgSlides} src={require(`../../images/BeforeAfter/${this.state.slide.img}`)} alt=""/>
+          <img className={classes.imgSlides} src={require(`../../images/BeforeAfter/${this.state.slide.img}`)} alt=""/>
 
-            <h3 className={classes.titleSlides}>{this.state.slide.title}</h3>
+          <h3 className={classes.titleSlides}>{this.state.slide.title}</h3>
 
-            <SectionMainText assignClasses={['communication']}>{this.state.slide.text}</SectionMainText>
-          </div>
+          <SectionMainText assignClasses={['communication']}>{this.state.slide.text}</SectionMainText>
 
         </Container>
 

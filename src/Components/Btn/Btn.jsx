@@ -12,7 +12,7 @@ const btn = (props) => {
 
   return (
     <button className={addClasses.join(' ')} 
-      onClick={props.communicationClicked}
+      onClick={props.communicationClicked || props.modalFormClicked}      
       >
 
       {props.text}

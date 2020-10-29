@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import OverlayWave from '../../Components/OverlayWave/OverlayWave';
 import Container from '../../Components/Container/Container';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import Subtitle from '../../Components/Subtitle/Subtitle';
@@ -18,6 +19,16 @@ class SectionForm extends Component {
     return (
       <section className={classes.sectionForm}>
         <Container assignClasses={['sectionForm']}>
+
+          <div className={classes.overlayBalls}>
+            <div className={classes.ball}></div>
+            <div className={classes.ball}></div>
+            <div className={classes.ball}></div>
+            <div className={classes.ball}></div>
+            <div className={classes.ball}></div>
+          </div>
+
+          <OverlayWave assignClasses={['sectionForm']} />
           
           <Subtitle assignClasses={['sectionForm']}>
             let’s do this
@@ -27,7 +38,7 @@ class SectionForm extends Component {
             Fill up the form and we’ll get in touch within a few hours
           </SectionTitle>          
 
-          <Form />
+          <Form id={'mainForm'} />
           
           <CountryList />
 

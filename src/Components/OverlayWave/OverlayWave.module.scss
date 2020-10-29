@@ -1,6 +1,5 @@
 .OverlayWave {
   display: none;
-  background: url(../../images/WaveLines/2.png) right top no-repeat;
   background-size: 130%;
   position: absolute;
   top: 0;
@@ -11,4 +10,78 @@
   @media (min-width: 768px) {
     display: block;
   }
+  &.header {
+    // background: url(../../images/WaveLines/1.png) no-repeat;
+    
+    
+  }
+  &.hero {
+    background: url(../../images/WaveLines/3.png) right top no-repeat;
+    z-index: 0;
+    background-size: 720px 1197px;
+    background-position: left 442px top 9px;
+    top: 80px;
+    @media (min-width: 1024px) {
+      background-size: 720px 1249px;
+      background-position: left 567px top 9px;
+
+    }
+    
+  }
+  &.sectionSlider {
+    background: url(../../images/WaveLines/2.png) right top no-repeat;
+    background-size: 990px 1562px;
+    background-position: left 220px bottom -23px;
+    top: -200px;
+    height: calc(100% + 200px);
+    transform: rotate(1deg);
+    @media (min-width: 1024px) {
+      background-position: left 443px bottom 9px;
+
+    }
+    
+  }
+  &.screenMobile {
+    background: url(../../images/WaveLines/3.png) right top no-repeat;
+    z-index: 0;
+    background-size: 672px 1427px;
+    background-position: left 78% top -54px;
+    top: 0px;
+    height: 60%;
+    @media (min-width: 1024px) {
+      background-size: 772px 1627px;
+      height: 100%;
+
+    }
+    
+  }
+  &.screenMobileTwo {
+    height: 40%;
+    background: url(../../images/WaveLines/2.png) right top no-repeat;
+    z-index: 0;
+    background-size: 1127px 2023px;
+    background-position: left 48% bottom 5px;
+    top: auto;
+    bottom: 0px;
+    @media (min-width: 1024px) {
+      display: none;
+    }    
+  }
+  &.sectionForm {
+    height: 100%;
+    background: url(../../images/WaveLines/2.png) right top no-repeat;
+    z-index: -1;
+    background-size: 947px 2023px;
+    background-position: left 0px bottom 5px;
+    transform: translateX(20%);
+    top: auto;
+    bottom: 0px;
+    @media (min-width: 1024px) {
+      transform: translateX(40%);
+      background-position: left 0% bottom -55px;
+      background-size: 1017px 1523px;
+
+    }    
+  }
+  
 }

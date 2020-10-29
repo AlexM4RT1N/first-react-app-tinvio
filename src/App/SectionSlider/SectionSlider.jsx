@@ -22,7 +22,7 @@ class SectionSlider extends Component {
       <section className={classes.sectionSlider}>
         <Container assignClasses={['sectionSlider']}>
           
-          <OverlayWave />
+          <OverlayWave assignClasses={['sectionSlider']} />
 
           <Slider slides={this.state.slides} />
 

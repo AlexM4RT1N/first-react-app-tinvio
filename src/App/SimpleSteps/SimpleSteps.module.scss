@@ -1,3 +1,9 @@
 .simpleSteps {
   background: #f3f5f6;
+  .stepsList {
+    @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    }    
+  }
 }

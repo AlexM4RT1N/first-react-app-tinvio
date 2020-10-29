@@ -29,6 +29,7 @@
       position: relative;
       cursor: pointer;
       pointer-events: fill;
+      transition: all 0.3s;
       &::before,
       &::after {
         content: '';
@@ -41,6 +42,15 @@
         width: 10px;
         height: 3px;
         border-radius: 30%;
+        transition: all 0.3s;
+      }
+      &:hover {
+        border: solid 1px #acacad;
+        background-color: rgb(243, 243, 243);
+        &::before,
+        &::after {
+          left: calc(50% - 2px);
+        }
       }
     }
     .prevSlide,
@@ -55,6 +65,7 @@
           background: rgb(206, 206, 206);
         }
       }
+      
       
     }
     .prevSlide {
@@ -72,6 +83,12 @@
         transform: rotate(45deg);
         top: calc(50% + 2px);
         left: calc(50% - 6px);
+      }
+      &:hover {
+        &::before,
+        &::after {
+          left: calc(50% - 8px);
+        }
       }
     }
     .nextSlide {
@@ -98,6 +115,7 @@
       align-items: center;
       justify-content: space-between;
       .dotsItem {
+        transition: all 0.3s;
         border-radius: 50%;
         width: 6px;
         height: 6px;
@@ -110,4 +128,59 @@
       }
     }
   }
+  .wrapNavText {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    flex-flow: row wrap;
+    .wrapNavText {
+      max-width: none;
+      display: flex;
+      flex-flow: row wrap;
+      width: 100%;
+      .sliderNav {
+        order: 1;
+        margin: 0 -28px 0 auto;
+      }
+      .wrapTitleText {
+        width: 366px;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-flow: row nowrap;
+    .underWave {
+      width: calc(100vw + 53px);
+      height: 100vw;
+      min-height: 394px;
+      max-height: 592px;
+      max-width: 1110px;
+      border-radius: 53px;
+      background-color: #fcede8;
+      position: absolute;
+      top: 0;
+      left: 452px;
+      z-index: 1;
+    } 
+    .wrapNavText {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: center;
+      margin-right: 88px;
+      .sliderNav {
+        order: 1;
+        margin: 0 auto 0 0;
+        padding-bottom: 134px;
+      }
+      .wrapTitleText {
+        width: 366px;
+        padding-top: 73px;
+      }
+    }    
+  }
+  
 }

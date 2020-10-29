@@ -8,5 +8,11 @@
   margin-bottom: 16px;
   &.sectionForm {
     text-transform: uppercase;
+    @media (min-width: 1024px) {      
+      text-align: left;
+      position: relative;
+      padding-top: 70px;
+    } 
+
   }
 }

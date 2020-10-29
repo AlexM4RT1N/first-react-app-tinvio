@@ -15,6 +15,7 @@ const nav = (props) => {
 
   return (
     <div className={addClasses.join(' ')}>
+      <div className={classes.overlayWave}></div>
       <ul className={classes.nav__list}>
         {
           props.items.map((item, index) => {
@@ -23,7 +24,7 @@ const nav = (props) => {
         }
       </ul> 
         { 
-          props.btn ? <Btn text={'Get started'} assignClasses={['nav']} /> : null
+          props.btn ? <Btn modalFormClicked={props.modalFormClicked} text={'Get Started'} assignClasses={['nav']} /> : null
         }
 
     </div>
