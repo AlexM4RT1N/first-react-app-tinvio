@@ -13,6 +13,8 @@
   &.hero {
     max-width: 700px;
     margin-bottom: 48px;
+    padding: 0 0px;
+    min-width: 303px;
     @media (min-width: 768px) {
       margin-bottom: 113px;
       min-width: 732px;
@@ -22,7 +24,7 @@
     @media (min-width: 1024px) {
       margin-bottom: 50px;
       min-width: 732px;
-      transform: translateX(-12px);
+      transform: translateX(0px);
       letter-spacing: 0.8px;
     }
   }
@@ -32,6 +34,9 @@
       margin-bottom: 65px;
       font-size: 34px;
       letter-spacing: -0.3px;
+    }
+    @media (min-width: 1024px) {
+      margin-bottom: 70px;
     }
   }
   &.sectionSlider {
@@ -51,8 +56,11 @@
       margin-bottom: 45px;
     }
     @media (min-width: 1024px) {
-      margin:0 auto 40px 0;
-      
+      margin:0 auto 40px 0;      
+    }
+    @media (min-width: 1280px) {
+      padding: 0;  
+      letter-spacing: 0.7px; 
     }
   }
   &.screenMobile {
@@ -71,11 +79,20 @@
       margin-bottom: 22px;
       font-size: 34px;
       letter-spacing: -0.3px;
+    }
+    @media (min-width: 1280px) {
+      padding: 0;  
+      letter-spacing: 0px; 
     }    
   }
   &.simpleSteps {
     margin-bottom: 62px;
     @media (min-width: 768px) {
+      margin-bottom: 76px;
+      font-size: 34px;
+      letter-spacing: -0.3px;
+    }    
+    @media (min-width: 1024px) {
       margin-bottom: 85px;
       font-size: 34px;
       letter-spacing: -0.3px;
@@ -92,12 +109,15 @@
       position: relative;
     }    
     @media (min-width: 1024px) {
-      margin-bottom: 72px;
       font-size: 42px;     
       max-width: 380px;
       text-align: left;
       padding: 0;
-      margin: 0 auto 72px 0;
+      margin: 0 auto 78px 0;
+    }    
+    @media (min-width: 1280px) {    
+      max-width: 480px;
+      margin: 0 auto 96px 0;
     }    
   }
 }

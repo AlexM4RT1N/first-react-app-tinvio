@@ -19,7 +19,7 @@
     }
   }
   &.hero {
-    padding: 122px 30px 50px;
+    padding: 122px 30px 35px;
     @media (min-width: 768px) {
       padding: 197px 30px 50px;
     }
@@ -27,13 +27,20 @@
       padding: 197px 0px 50px;
     }
     @media (min-width: 1280px) {
+      padding: 197px 0px 42px;
       position: relative;
     }
   }
   &.partners {
     padding: 0px 20px 43px;
     @media (min-width: 768px) {
-      padding: 5px 20px 43px;
+      padding: 5px 0px 43px;
+    }
+    @media (min-width: 1024px) {
+      padding: 5px 11px 38px;
+    }
+    @media (min-width: 1280px) {
+      padding: 5px 112px 38px;
     }
   }
   &.sectionSlider {
@@ -59,9 +66,12 @@
       flex-flow: column wrap;
       height: 559px;
     }
+    @media (min-width: 1024px) {
+      padding: 96px 76px 75px 59px;
+    }
   }
   &.screenMobile {
-    padding: 90px 20px 46px;
+    padding: 60px 20px 46px;
     @media (min-width: 768px) {
       padding: 90px 20px 126px;
     }
@@ -79,13 +89,13 @@
   &.simpleSteps {
     padding: 78px 24px 60px;
     @media (min-width: 768px) {
-      padding: 70px 24px 66px;
+      padding: 84px 24px 81px;
     }
     @media (min-width: 1024px) {
       padding: 70px 7px 66px;
     }
     @media (min-width: 1280px) {
-      padding: 70px 64px 66px;
+      padding: 67px 64px 66px;
     }
   }
   &.sectionForm {
@@ -94,18 +104,19 @@
       padding: 105px 24px 80px;
     }
     @media (min-width: 1024px) {
-      padding: 105px 46px 80px;
+      padding: 171px 46px 80px;
       position: relative;
-      height: 793px;
+      height: 917px;
       display: flex;
       flex-flow: column wrap;
     }
     @media (min-width: 1280px) {
-      padding: 105px 128px 80px;
+      height: 819px;
+      padding: 148px 150px 80px 76px;
     }
   }
 
-  &.footer {
+  &.footer {    
     display: flex;
     flex-flow: column;
     align-items: center;

@@ -35,7 +35,9 @@ class SectionForm extends Component {
           </Subtitle>
 
           <SectionTitle assignClasses={['sectionForm']}>
-            Fill up the form and we’ll get in touch within a few hours
+            Fill up the form and we’ll get in touch within
+            { document.documentElement.clientWidth > 1279 ? <br/> : ' '}
+            a few hours
           </SectionTitle>          
 
           <Form id={'mainForm'} />

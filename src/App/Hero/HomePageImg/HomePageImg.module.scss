@@ -7,6 +7,7 @@
     background: url(../../../images/Hero/Home-page_with-shadow.png) left no-repeat;
     background-size: cover;
     max-width: 711px;    
+    transform: translateX(-15px);  
   }
   
   @media (min-width: 768px) {
@@ -25,6 +26,13 @@
       transform: translateX(0px);
       max-width: 1024px;
       height: 610px;
+    }
+  }
+  @media (min-width: 1280px) {    
+    .HomePageImg {
+      transform: translateX(0px);
+      max-width: 1065px;
+      height: 617px;
     }
   }
 }

@@ -6,20 +6,24 @@
   margin-top: 77px;
   margin-bottom: 50px;
   .Boxes {
-    background: url(../../../images/Hero/Boxes.png) 98% center no-repeat;
+    background: url(../../../images/Hero/Boxes.png) no-repeat;
+    background-position: 98% center;
     background-size: cover;
-    width: 69%;
+    width: 62%;
     position: relative;
     z-index: 2;
-    transform: translateX(10px);
+    margin-right: -27px;
+    transform: translate(0, 1px);
   }
   .Fruits {
-    width: 50%;
-    background: url(../../../images/Hero/Fruits.png) left no-repeat;
+    width: 46%;
+    height: 532px;
+    background: url(../../../images/Hero/Fruits.png)  no-repeat;
+    background-position: left top;
     background-size: cover;
     position: relative;
     z-index: 1;
-    transform: translate(-13px, 50px);
+    transform: translate(0, 61px);
   }
   @media (min-width: 710px) {
     .Boxes,
@@ -41,28 +45,28 @@
     }
     .Boxes{
       width: 394px;
-      transform: translateX(-62%);
+      transform: translateX(-64%);
     }
     .Fruits {
       width: 315px;
       height: 530px;
-      transform: translate(52%, -3%);
+      transform: translate(54%, -3%);
     }
   }
   @media (min-width: 1024px) {       
     .Boxes{
-      transform: translateX(-70%);
+      transform: translateX(-72%);
     }
     .Fruits {
-      transform: translate(68%, -3%);
+      transform: translate(70%, -3%);
     }
   }
   @media (min-width: 1280px) {       
     .Boxes{
-      transform: translateX(-62%);
+      transform: translateX(-64%);
     }
     .Fruits {
-      transform: translate(60%, -3%);
+      transform: translate(62%, -3%);
     }
   }
 }

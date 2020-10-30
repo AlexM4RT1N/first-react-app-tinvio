@@ -37,4 +37,15 @@
       min-height: 77px;      
     }
   }
+  @media (min-width: 1024px) {
+    justify-content: space-around;
+    .partnersItem {
+      &:first-child {
+        .itemLogo {
+          max-height: 125%;
+          object-fit: contain;
+        }
+      }     
+    }
+  }
 }

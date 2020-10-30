@@ -11,7 +11,12 @@
     @media (min-width: 1024px) {      
       text-align: left;
       position: relative;
-      padding-top: 70px;
+      padding-top: 79px;
+      letter-spacing: 1.3px;
+    } 
+    @media (min-width: 1280px) {
+      padding-top: 82px;
+      margin-bottom: 14px;
     } 
 
   }

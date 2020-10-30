@@ -61,12 +61,13 @@
   }  
   @media (min-width:768px) {
     .socialList {
-      padding-left: 11px;
+      padding-left: 16px;
       border-left: 1px solid gray;
       margin: 0 auto 0 0;
       order: 1;
       .socialItem {
         height: 26px;
+        width: 36px;
       }
     }
     .downloadList {
@@ -74,10 +75,11 @@
       margin-bottom: 0;
     }
     .footerCopy {
-      margin: 0 24px;
+      margin: 0 24px 0 31px;
     }
   }
   @media (min-width:1024px) {
+    position: relative;
     .socialList {      
       order: 0;      
     }

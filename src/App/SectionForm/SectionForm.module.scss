@@ -4,9 +4,10 @@
   .overlayBalls {
     display: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     z-index: 0;
+
     .ball {
       border-radius: 50%;
       background-color: cadetblue;
@@ -28,8 +29,8 @@
       &:nth-child(3) {
         width: 188px;
         height: 188px;
-        top: 505px;
-        left: 190px;
+        top: 484px;
+        left: 172px;
         background: #f3efef;
       }
       &:nth-child(4) {
@@ -49,6 +50,13 @@
     }
     @media (min-width:768px) {
       display: block;
+    }
+    @media (min-width:1024px) {
+      top: 108px;
+      left: 18px;
+    }
+    @media (min-width:1280px) {
+      top: 86px;
     }
   }
 }
@@ -86,19 +94,26 @@
   }
   @media (min-width:768px) {
     left: -48px;
-    margin: 0 auto 13px;
+    margin: 0 auto 14px;
     &.right {
       margin: -25px auto 0;
       left: 71px;
     }
   }
   @media (min-width:1024px) {
-    left: -38px;
-    margin: 0 auto 43px;
+    left: -60px;
+    margin: 0 auto 117px;
     &.right {
       margin: -25px auto 0 0;
-      left: -23px;
-            
+      left: -46px;
+    }
+  }
+  @media (min-width:1280px) {
+    left: -60px;
+    margin: 0 auto 13px;
+    &.right {
+      margin: -25px auto -1px 0;
+      left: -76px;
     }
   }
 }
@@ -127,7 +142,11 @@
       }
     }
     @media (min-width:768px) {
-      padding: 13px 10px 17px 30px;
+      padding: 13px 10px 17px 20px;
+      transform: translate(14px, 0);
+      .country {
+        width: 44%;
+      }
     }
     
   }
@@ -136,6 +155,7 @@
     .countryList {
       position: relative;
       margin: 0;
+      transform: translate(0px, 0);
     }
   }
 }
