@@ -1,6 +1,6 @@
 .communication {
   width: 100%;
-  background: #f3f5f6;
+  background: #f8f9fb;
   text-align: center;
   .wrapBtn {
     display: flex;
@@ -9,16 +9,32 @@
     margin: 0 auto 40px;
   }
   .imgSlides {
-    height: 75vw;
-    width: 75vw;
-    min-width: 330px;
-    object-fit: contain;
-    object-position: center;
-    margin: 0 auto 20px;
+    width: 481px;
+    height: 277px;
+    min-width: 343px;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    &>img {
+      object-fit: contain;
+      object-position: center;
+      margin: 0 auto;
+      width: 343px;
+      height: 266px;
+    }
+    margin: 0 0 12px;
     @media (min-width: 768px) {
-      max-height: 386px;
-      max-width: 501px;
-      padding: 0 34px 0 0;
+      top: -11px;
+      width: 502px;
+      height: 385px;
+      margin: 0 0 20px;
+      &>img {
+        transform: translate(-17px, 0%);
+        width: 465px;
+        height: 410px;
+      }
     }
   }
   .titleSlides {
@@ -33,15 +49,17 @@
   @media (min-width: 1024px) {
     .imgSlides {
       order: -1;
-      width: 54%;
-      min-width: 330px;
-      object-fit: contain;
-      object-position: center;
-      margin: 23px auto 0px;
-      max-height: 386px;
-      max-width: 501px;
-      padding: 0 27px 0 0;
-      transform: translateX(-35px);
+      top: -11px;
+      width: 514px;
+      height: 385px;
+      margin: 0 0 20px;
+      left: 0;
+      transform: translate(-2%, 0%);
+      &>img {
+        transform: translate(-27px, 10px);
+        width: 468px;
+        height: 410px;
+      }
     }
     .wrapBtn {
       margin:0 0 64px 0;      
@@ -56,11 +74,17 @@
   }
   @media (min-width: 1280px) {
     .imgSlides {
-      margin: 9px 68px 0px 40px;
-      padding: 0 0px 0 0;
-      max-height: 430px;
-      max-width: 650px;
-      transform: translate(-46px, 0px);
+      order: -1;
+      top: -11px;
+      width: 728px;
+      height: 430px;
+      margin: -6px 0 -10px;
+      transform: translate(0, 0%);
+      &>img {
+        transform: translate(-61px, 18px);
+        width: 626px;
+        height: 412px;
+      }
     }
   }
 }

@@ -26,7 +26,7 @@ const nav = (props) => {
         { 
           props.btn && (document.documentElement.clientWidth < 768) ? 
 
-          <a style={{width: '100%'}} href="#mainForm"><Btn modalFormClicked={props.modalFormClicked} text={'Get Started'} assignClasses={['nav']} /></a> :
+          <a href="#mainForm"><Btn modalFormClicked={props.modalFormClicked} text={'Get Started'} assignClasses={['nav']} /></a> :
 
           props.btn ? <Btn modalFormClicked={props.modalFormClicked} text={'Get Started'} assignClasses={['nav']} /> : null
         }

@@ -3,6 +3,7 @@ import Container from '../../Components/Container/Container';
 import SectionTitle from '../../Components/SectionTitle/SectionTitle';
 import Btn from '../../Components/Btn/Btn';
 import SectionMainText from '../../Components/SectionMainText/SectionMainText';
+import Animations from '../../Components/Animations/Animations';
 
 import classes from './Communication.module.scss';
 
@@ -12,29 +13,26 @@ class Communication extends Component {
     slide: {
       before: 'active',
       after: '',
-      img: 'Before.png',
+      img: 'Before',
       title: 'Old-School Chaos',
       text: 'Unstructured orders across multiple apps and inboxes. New message notifications and alerts every few minutes',
     }    
   }  
 
   before = () => {
-    console.log('before');
-
     this.setState({slide: {
       before: 'active',
       after: '',
-      img: 'Before.png',
+      img: 'Before',
       title: 'Old-School Chaos',
       text: 'Unstructured orders across multiple apps and inboxes. New message notifications and alerts every few minutes',
     }})
   } 
   after = () => {
-    console.log('after');
     this.setState({slide: {
       before: '',
       after: 'active',
-      img: 'After.png',
+      img: 'After',
       title: '222-School Chao2',
       text: 'Unstructured 22222 across multiple apps and inboxes. New message notifications 222 alerts every few minutes',
     }})
@@ -42,6 +40,7 @@ class Communication extends Component {
 
 
   render() {
+    const img = this.state.slide.img;
 
     return (
       <section className={classes.communication}>
@@ -55,8 +54,12 @@ class Communication extends Component {
             <Btn communicationClicked={() => this.before()} text={'BEFORE'} assignClasses={['communication', this.state.slide.before]} />          
             <Btn communicationClicked={() => this.after()} text={'AFTER'} assignClasses={['communication', this.state.slide.after]} />
           </div>
-
-          <img className={classes.imgSlides} src={require(`../../images/BeforeAfter/${this.state.slide.img}`)} alt=""/>
+          <div className={classes.imgSlides}>
+            {
+              img === 'Before' ? <img src={require(`../../images/BeforeAfter/Before.png`)} alt="Before"/> :
+              img === 'After' ? <Animations /> : null
+            }
+          </div>
 
           <h3 className={classes.titleSlides}>{this.state.slide.title}</h3>
 

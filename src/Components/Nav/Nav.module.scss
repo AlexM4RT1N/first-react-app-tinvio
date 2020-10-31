@@ -35,11 +35,14 @@
     flex-flow: column;
     overflow: hidden;
     transition: display 0.3s ease 0.3s, height 0.3s ease 0s;
+    &>a {
+      width: 100%;
+    }
     .overlayWave {
       display: block;
       background-image: url(../../images/WaveLines/1.png);    
-      background-size: 165% 81%;
-      background-position: right -84px bottom;
+      background-size: 580px 710px;
+      background-position: left -156px bottom;
       background-repeat: no-repeat;
       position: absolute;
       top: 0;
@@ -74,7 +77,6 @@
     }   
     @media (min-width: 768px) {
       padding: 0;
-
       display: flex;
       width: 100%;
       height: 100%;
@@ -82,6 +84,9 @@
       background: transparent;
       justify-content: space-between;
       flex-flow: row;
+      &>a {
+        width: 105px;
+      }
       .nav__list {
         flex-flow: row;
         margin-bottom: 0;

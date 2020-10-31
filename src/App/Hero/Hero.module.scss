@@ -3,17 +3,17 @@
   position: relative;
   margin-bottom: 0px;
   
-  background-image: linear-gradient(to top, white 411px, #f3f5f6 411px);
+  background-image: linear-gradient(to top, white 411px, #f8f9fb 411px);
   @media (min-width: 768px) {
-    background-image: linear-gradient(to top, white 428px, #f3f5f6 428px);
+    background-image: linear-gradient(to top, white 428px, #f8f9fb 428px);
   }
   @media (min-width: 1024px) {
-    background-image: linear-gradient(to top, white 573px, #f3f5f6 573px);
+    background-image: linear-gradient(to top, white 573px, #f8f9fb 573px);
   }
   &:before {
     content: '';
     display: block;
-    background: #f3f5f6;
+    background: #f8f9fb;
     width: 100%;
     position: absolute;
     top: 84px;

@@ -38,7 +38,7 @@ class Hero extends Component {
 
           <BoxesFruits />
 
-          <HomePageImg />
+          <HomePageImg />          
 
         </Container>
 
