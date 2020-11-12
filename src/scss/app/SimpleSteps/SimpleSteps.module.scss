@@ -1,0 +1,9 @@
+.simpleSteps {
+  background: rgb(250, 251, 252);
+  .stepsList {
+    @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    }    
+  }
+}

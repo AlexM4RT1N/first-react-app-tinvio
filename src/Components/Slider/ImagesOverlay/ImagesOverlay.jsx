@@ -1,18 +1,12 @@
 import React, { Component } from "react";
 
-import classes from './ImagesOverlay.module.scss';
+import classes from '../../../scss/components/Slider/ImagesOverlay/ImagesOverlay.module.scss';
 
-class ImagesOverlay extends Component {
-  state = {   
-  }  
-
-
+export default class ImagesOverlay extends Component {
   render() {
     const { slides, currentSlide } = this.props;
-
     return (
       <div className={classes.imagesOverlay}>
-
         <div className={classes.images}>
           <ul style={{transform: `translateX(-${currentSlide}00%)`}} className={classes.imagesList}>
             {
@@ -24,24 +18,10 @@ class ImagesOverlay extends Component {
                 )
               })
             }
-            
-
-            {/* <li>
-              <img src={require(`../../../images/Carousel/${image}`)} alt="img"/>
-            </li>
-
-            <li>
-              <img src={require(`../../../images/Carousel/${image}`)} alt="img"/>
-            </li> */}
           </ul>
-          
-
         </div>
-        <div className={classes.underWave}>
-        </div>
+        <div className={classes.underWave}></div>
       </div>
     );
   }
 };
-
-export default ImagesOverlay;

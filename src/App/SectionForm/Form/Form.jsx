@@ -1,31 +1,23 @@
 import React, { Component } from "react";
 import DescrWithArrow from '../DescrWithArrow/DescrWithArrow';
-import Btn from '../../../Components/Btn/Btn'
-import TextNearBtn from '../../../Components/TextNearBtn/TextNearBtn'
+import Btn from '../../../components/Btn/Btn'
+import TextNearBtn from '../../../components/TextNearBtn/TextNearBtn'
 
-import classes from './Form.module.scss';
+import classes from '../../../scss/app/SectionForm/Form/Form.module.scss';
 
-class Form extends Component {
-
+export default class Form extends Component {
   state = {
     active: false
-  }  
-
+  }
 
   render() {
     const { id, modalFormClicked, modalAcvtive, classModal } = this.props;
-
     return (
       <div className={`${classes.wrapForm} ${classes[classModal]} ${classes[modalAcvtive]}`}>
-        <DescrWithArrow text={'Let’s get to know each other'} arrow={'left'} />
-
-        
+        <DescrWithArrow text={'Let’s get to know each other'} arrow={'left'}/>        
         <form id={id} className={classes.form} action="#">
-
           <div onClick={modalFormClicked} className={classes.closeModalForm}></div>
-
           <h3 className={classes.formTitle}>Hi, we are Tinvio! And you?</h3>
-
           <div className={classes.wrapInputs}>
             <div className={`${classes.inputName} ${classes.input}`}>
               <input name='name' id='name' type="text" placeholder='Name' required/>              
@@ -44,16 +36,11 @@ class Form extends Component {
               <label htmlFor="name">Phone</label>
             </div>
           </div>
-
           <Btn assignClasses={['form']} text={'Get Started'} />
-
           <TextNearBtn  assignClasses={['form']}>No spam, promise 🙌</TextNearBtn>
-
         </form>
         <div onClick={modalFormClicked} className={classes.closeOverlayModal}></div>
       </div>
     );
   }
 };
-
-export default Form;

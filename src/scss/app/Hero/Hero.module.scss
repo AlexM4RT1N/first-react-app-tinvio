@@ -1,0 +1,14 @@
+.hero {
+  width: 100%;
+  position: relative;
+  margin-bottom: 0px;
+  
+  background-image: linear-gradient(to top, white 411px, rgb(250, 251, 252) 411px);
+  @media (min-width: 768px) {
+    background-image: linear-gradient(to top, white 428px, rgb(250, 251, 252) 428px);
+  }
+  @media (min-width: 1024px) {
+    background-image: linear-gradient(to top, white 573px, rgb(250, 251, 252) 573px);
+  }
+  
+}

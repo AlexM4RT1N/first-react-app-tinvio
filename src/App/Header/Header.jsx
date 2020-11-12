@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import OverlayWave from '../../Components/OverlayWave/OverlayWave';
 import Form from '../SectionForm/Form/Form';
-import Container from '../../Components/Container/Container';
-import Logo from '../../Components/Logo/Logo';
-import Nav from '../../Components/Nav/Nav';
+import Container from '../../components/Container/Container';
+import Logo from '../../components/Logo/Logo';
+import Nav from '../../components/Nav/Nav';
 import Burger from './Burger/Burger';
 
-import './Header.scss';
+import classes from '../../scss/app/Header/Header.module.scss';
 
-class Header extends Component {
-
+export default class Header extends Component {
   state = {
     items: [
       {text: 'Home', href: '#0'},
@@ -17,49 +15,58 @@ class Header extends Component {
       {text: 'About', href: '#2'},
       {text: 'Contact', href: '#3'},
     ],
-
     classAcvtive: '',
     modalAcvtive: '',
   }
 
+  htmlLock = (bool) => {
+    document.documentElement.style.overflow = bool ? 'hidden auto' : 'hidden hidden'; 
+    document.documentElement.style.height = bool ? 'auto' : '100vh';
+  }
+
   burgerActive = () => {
     const changeClassActive = this.state.classAcvtive ? '' : 'active';
-    this.setState({classAcvtive: changeClassActive})
-    
+    this.setState({classAcvtive: changeClassActive});
+    this.htmlLock(this.state.classAcvtive);
   }
 
   btnGetStartedHeader = () => {
     if(document.documentElement.clientWidth < 768){
       const changeClassActive = this.state.classAcvtive ? '' : 'active';
-      this.setState({classAcvtive: changeClassActive})
+      this.setState({classAcvtive: changeClassActive});
+      this.htmlLock(this.state.classAcvtive);
     } else {
       const changeModalActive = this.state.modalAcvtive ? '' : 'active';
-      this.setState({modalAcvtive: changeModalActive})
+      this.setState({modalAcvtive: changeModalActive});
+      this.htmlLock(this.state.modalAcvtive);
     }
   }
 
-
   render() {
-
     return (
-      <header className="header" >
-        <Form modalFormClicked={() => this.btnGetStartedHeader()} classModal={'modal'} modalAcvtive={[this.state.modalAcvtive]} />
-
+      <header id='header'  className={classes.header} >
+        <Form modalFormClicked={() => this.btnGetStartedHeader()} 
+          classModal={'modal'} 
+          modalAcvtive={[this.state.modalAcvtive]} 
+        />
         <Container assignClasses={['header']}>
-
-          <OverlayWave assignClasses={['header']} />
-
-          <Logo assignClasses={['header']} />
-              
-          <Nav modalFormClicked={() => this.btnGetStartedHeader()} btn={true} items={this.state.items} assignClasses={['header', this.state.classAcvtive]} />        
-
-          <Burger clicked={() => this.burgerActive()} assignClasses={[this.state.classAcvtive]} />
-
+          <Logo assignClasses={['header']} />              
+          <Nav modalFormClicked={() => this.btnGetStartedHeader()} 
+            btn={true} 
+            items={this.state.items} 
+            assignClasses={['header', this.state.classAcvtive]} 
+          />
+          <Burger clicked={() => this.burgerActive()} 
+            assignClasses={[this.state.classAcvtive]} 
+          />
         </Container>
-
       </header>
     );
   }
 };
 
-export default Header;
+window.addEventListener('scroll', (e) => {
+  document.documentElement.scrollTop ? 
+  document.getElementById('header').style.backgroundColor = 'white' :
+  document.getElementById('header').style.backgroundColor = 'transparent';
+})

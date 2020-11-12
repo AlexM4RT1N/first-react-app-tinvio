@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './SectionMainText.module.scss';
+import classes from '../../scss/components/SectionMainText/SectionMainText.module.scss';
 
 const sectionMainText = (props) => {
   const addClasses = [classes.sectionMainText];
@@ -15,7 +15,6 @@ const sectionMainText = (props) => {
       {props.children}
     </p>
   )
-
 }
 
 export default sectionMainText;

@@ -1,0 +1,112 @@
+.btn {
+  display: block;
+  font-size: 21px;
+  font-weight: 500;
+  color: white;
+  border: 1px solid #ff474d;
+  border-radius: 5px;
+  background-color:  #ff474d;
+  height: 36px;
+  line-height: 36px;
+  padding:0 15px 0;
+  cursor: pointer;
+  &.nav {   
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    transition: all 0.3s;
+    box-shadow: rgba(94, 22, 22, 0.47) 0px 14px 30px -8px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+
+    &:hover {
+      background-color: rgba(255, 71, 77, 0.2);
+      color: #ff474d;
+    } 
+    
+    @media (min-width: 768px) {
+      box-shadow: none;
+      border-radius: 5px;
+      width: 105px;
+      font-size: 12px;
+      height: 36px;
+      line-height: 36px;
+      border: solid 1px rgba(144, 149, 153, 0.35);
+      color: black;
+      background-color: transparent; 
+      background-image: none; 
+      transition: all 0.3s;
+      
+      &:hover {
+        background-color: rgba(144, 149, 153, 0.2);
+        background-image: none;
+        color: black;
+      } 
+    }
+  }
+  &.hero {
+    width: 214px;
+    height: 52px;
+    font-size: 15px;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid #ff474d;
+    background-image: linear-gradient(104deg, #ff474d, #fa4353);
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0px 16px 10px -15px rgba(94, 22, 22, 0.48);
+    // -webkit-filter: blur(10px);
+    // filter: blur(10px);
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 4px 12px 10px -15px rgba(94, 22, 22, 0.48);
+      transform: translateY(4px);
+    }
+    @media (min-width: 768px) {
+      z-index: 1;
+    }
+  }
+  &.communication {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 48px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #787c80;
+    width: 128px;
+    height: 48px;
+    border-radius: 6px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0);
+    border: solid 1px rgba(144, 149, 153, 0.35);
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s;
+    &.active {
+      color: #f43939;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.11);
+      border: solid 1px rgba(33, 39, 46, 0.05);
+      background-color: #fff;      
+    }
+    &:hover {
+      border: solid 1px rgb(230, 76, 76);
+    }
+  }
+  &.form {
+    width: 100%;
+    height: 52px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 52px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 0px 0px rgb(153, 153, 153);
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: -10px 11px 11px -5px rgb(153, 153, 153);
+      transform: translateY(-4px);
+    }
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+}

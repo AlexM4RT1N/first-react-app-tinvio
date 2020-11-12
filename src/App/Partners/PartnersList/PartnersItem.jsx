@@ -1,24 +1,17 @@
 import React, { Component } from "react";
 
-import classes from './PartnersList.module.scss';
+import classes from '../../../scss/app/Partners/PartnersList/PartnersList.module.scss';
 
-class PartnersItem extends Component {
-
-  state = {
-    
-  }  
-
-
+export default class PartnersItem extends Component {
   render() {
-
     const {name, src} = this.props;
-
     return (
       <li className={classes.partnersItem}>
-        <img className={classes.itemLogo} src={require(`../../../images/logosPartners/${src}`)} alt={name}/>
+        <img className={classes.itemLogo} 
+          src={require(`../../../images/logosPartners/${src}`)} 
+          alt={name}
+        />
       </li>
     );
   }
 };
-
-export default PartnersItem;

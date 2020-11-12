@@ -1,13 +1,13 @@
 import React from 'react';
 
-import classes from './TextNearBtn.module.scss';
+import classes from '../../scss/components/TextNearBtn/TextNearBtn.module.scss';
 
 const textNearBtn = (props) => {
   const addClasses = [classes.TextNearBtn];
   
   if(props.assignClasses) {
     const assignClasses = [...props.assignClasses]
-    assignClasses.map((item) => addClasses.push(classes[item]))
+    assignClasses.forEach((item) => addClasses.push(classes[item]))
   } 
 
   return (
@@ -15,7 +15,6 @@ const textNearBtn = (props) => {
       {props.children}
     </span>
   )
-
 }
 
 export default textNearBtn;

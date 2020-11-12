@@ -9,35 +9,22 @@ import SimpleSteps from './SimpleSteps/SimpleSteps';
 import SectionForm from './SectionForm/SectionForm';
 import Footer from './Footer/Footer';
 
-import './App.scss';
+import '../scss/app/App.scss';
 
-class App extends Component {
-
-  
-  render() { 
+export default class App extends Component {
+  render() {
     return (
       <div className="App">
         <Header />
-
         <Hero />
-
         <Partners />
-
         <SectionSlider />
-
         <Communication />
-
         <ScreenMobile />
-
         <SimpleSteps />
-
         <SectionForm />
-
         <Footer />
-
       </div>
     );
   }
 }
-
-export default App;

@@ -1,0 +1,25 @@
+.appLogo {
+  min-width: 120px;
+  min-height: 48px;
+  max-width: 120px;
+  max-height: 48px;
+  position: relative;
+  z-index: 100;
+  background: url(../../../images/logo-color.svg) center no-repeat;
+  background-size: contain;
+  &.header {
+    margin-right: 14px;
+  }
+  &.footer {    
+    background: url(../../../images/logo-white.svg) center no-repeat;
+    margin-bottom: 31px;
+    @media (min-width: 768px) {
+      margin: 0 14px 25px 14px;
+      width: 20%;
+    }
+    @media (min-width: 1024px) {
+      margin: 0 12px 0px 0px;
+      width: 20%;
+    }
+  }
+}

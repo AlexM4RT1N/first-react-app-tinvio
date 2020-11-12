@@ -1,13 +1,13 @@
 import React from "react";
-import classes from'./Burger.module.scss'
 
+import classes from '../../../scss/app/Header/Burger/Burger.module.scss';
 
 const burger = (props) => {
   const addClasses = [classes.burger];
   
   if(props.assignClasses) {
     const assignClasses = [...props.assignClasses]    
-    assignClasses.map((item) => addClasses.push(classes[item]))
+    assignClasses.forEach((item) => addClasses.push(classes[item]))
   }   
   
   return (

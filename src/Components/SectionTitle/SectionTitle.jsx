@@ -1,13 +1,13 @@
 import React from 'react';
 
-import classes from './SectionTitle.module.scss';
+import classes from '../../scss/components/SectionTitle/SectionTitle.module.scss';
 
 const sectionTitle = (props) => {
   const addClasses = [classes.SectionTitle];
   
   if(props.assignClasses) {
     const assignClasses = [...props.assignClasses]
-    assignClasses.map((item) => addClasses.push(classes[item]))
+    assignClasses.forEach((item) => addClasses.push(classes[item]))
   } 
 
   return (
@@ -15,7 +15,6 @@ const sectionTitle = (props) => {
       {props.children}
     </h2>
   )
-
 }
 
 export default sectionTitle;

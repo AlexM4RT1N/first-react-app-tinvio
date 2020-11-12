@@ -1,0 +1,40 @@
+.WrapHomePageImg {
+  width: 100%;
+  margin-bottom: 16px;
+  .HomePageImg {
+    height: 430px;
+    width: 120%;
+    background: url(../../../../images/Hero/Home-page_with-shadow.png) left no-repeat;
+    background-size: cover;
+    max-width: 711px;    
+    transform: translateX(-15px);  
+  }
+  
+  @media (min-width: 768px) {
+    position: relative;
+    z-index: 3;
+    .HomePageImg {
+      min-width: 742px;
+      transform: translateX(-15px);    
+      width: 100%;
+      height: 432px;
+      margin: 0 auto;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+  @media (min-width: 1024px) {    
+    .HomePageImg {
+      transform: translateX(0px);
+      max-width: 1024px;
+      height: 610px;
+    }
+  }
+  @media (min-width: 1280px) {    
+    .HomePageImg {
+      transform: translateX(0px);
+      max-width: 1065px;
+      height: 617px;
+    }
+  }
+}

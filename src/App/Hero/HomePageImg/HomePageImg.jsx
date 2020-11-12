@@ -1,16 +1,9 @@
 import React, { Component } from "react";
 
-import classes from './HomePageImg.module.scss';
+import classes from '../../../scss/app/Hero/HomePageImg/HomePageImg.module.scss';
 
-class HomePageImg extends Component {
-
-  state = {
-    
-  }  
-
-
+export default class HomePageImg extends Component {
   render() {
-
     return (
       <div className={classes.WrapHomePageImg}>
         <div className={classes.HomePageImg}></div>
@@ -18,5 +11,3 @@ class HomePageImg extends Component {
     );
   }
 };
-
-export default HomePageImg;

@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  position: fixed;
+  background: transparent; 
+  transition: background 0.25s ease 0s;
+  top: 0;
+  width: 100%;
+  z-index: 5;  
+  @media (min-width: 768px) {
+    justify-content: flex-start;    
+  }
+}

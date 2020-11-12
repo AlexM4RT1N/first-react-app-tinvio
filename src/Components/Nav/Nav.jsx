@@ -3,7 +3,7 @@ import Item from './Item'
 import Btn from '../Btn/Btn';
 
 
-import classes from './Nav.module.scss';
+import classes from '../../scss/components/Nav/Nav.module.scss';
 
 const nav = (props) => {
   const addClasses = [classes.nav];
@@ -18,19 +18,16 @@ const nav = (props) => {
       <div className={classes.overlayWave}></div>
       <ul className={classes.nav__list}>
         {
-          props.items.map((item, index) => {
-            return <Item key={index} text={item.text} href={item.href} />
-          })
+          props.items.map((item, index) => 
+            <Item key={index} text={item.text} href={item.href} />
+          )
         }
       </ul> 
-        { 
-          props.btn && (document.documentElement.clientWidth < 768) ? 
-
-          <a href="#mainForm"><Btn modalFormClicked={props.modalFormClicked} text={'Get Started'} assignClasses={['nav']} /></a> :
-
-          props.btn ? <Btn modalFormClicked={props.modalFormClicked} text={'Get Started'} assignClasses={['nav']} /> : null
-        }
-
+      { 
+        props.btn && (document.documentElement.clientWidth < 768) ? 
+        <a href="#mainForm"><Btn modalFormClicked={props.modalFormClicked} text={'Get Started'} assignClasses={['nav']} /></a> :
+        props.btn && <Btn modalFormClicked={props.modalFormClicked} text={'Get Started'} assignClasses={['nav']} />
+      }
     </div>
   );
 };

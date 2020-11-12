@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import DescrWithArrow from '../DescrWithArrow/DescrWithArrow';
 
-import classes from '../SectionForm.module.scss';
+import classes from '../../../scss/app/SectionForm/SectionForm.module.scss';
 
-class CountryList extends Component {
-
+export default class CountryList extends Component {
   state = {
     country: [
       {img: 'Singapore.png', name: 'Singapore'},
@@ -16,30 +15,23 @@ class CountryList extends Component {
       {img: 'India.png', name: 'India'},
       {img: 'Vietnam.png', name: 'Vietnam'},
     ]
-  }  
-
+  }
 
   render() {
-
     return (
       <div className={classes.wrapCountryList}>
         <DescrWithArrow text={'Or meet us in'} arrow={'right'} />
-        
         <ul className={classes.countryList}>
           { 
-            this.state.country.map((country, index) => {
-              return <li className={classes.country} key={index}  >
-                <img src={require(`../../../images/Form/countries/${country.img}`) } alt=""/>
+            this.state.country.map((country, index) => 
+              <li className={classes.country} key={index}>
+                <img src={require(`../../../images/Form/countries/${country.img}`)} alt=""/>
                 <span>{country.name}</span>
               </li>
-            }) 
+            ) 
           }
-        </ul>
-
-        
+        </ul>        
       </div>
     );
   }
 };
-
-export default CountryList;

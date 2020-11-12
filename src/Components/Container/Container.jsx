@@ -1,13 +1,13 @@
 import React from "react";
 
-import classes from './Container.module.scss';
+import classes from '../../scss/components/Container/Container.module.scss';
 
 const container = (props) => {
   const addClasses = [classes.container];
   
   if(props.assignClasses) {
     const assignClasses = [...props.assignClasses]
-    assignClasses.map((item) => addClasses.push(classes[item]))
+    assignClasses.forEach((item) => addClasses.push(classes[item]))
   } 
 
   return (

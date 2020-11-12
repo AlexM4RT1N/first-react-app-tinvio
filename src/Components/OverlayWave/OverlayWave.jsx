@@ -1,6 +1,6 @@
 import React from 'react';
 
-import classes from './OverlayWave.module.scss';
+import classes from '../../scss/components/OverlayWave/OverlayWave.module.scss';
 
 const OverlayWave = (props) => {
   const addClasses = [classes.OverlayWave];

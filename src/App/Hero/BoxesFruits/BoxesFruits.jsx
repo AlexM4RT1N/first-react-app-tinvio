@@ -1,16 +1,9 @@
 import React, { Component } from "react";
 
-import classes from './BoxesFruits.module.scss';
+import classes from '../../../scss/app/Hero/BoxesFruits/BoxesFruits.module.scss';
 
-class BoxesFruits extends Component {
-
-  state = {
-    
-  }  
-
-
+export default class BoxesFruits extends Component {
   render() {
-
     return (
       <div className={classes.BoxesFruits}>
         <div className={classes.Boxes}></div>
@@ -19,5 +12,3 @@ class BoxesFruits extends Component {
     );
   }
 };
-
-export default BoxesFruits;

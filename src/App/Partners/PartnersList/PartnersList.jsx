@@ -1,28 +1,22 @@
 import React, { Component } from "react";
 import PartnersItem from './PartnersItem';
 
-import classes from './PartnersList.module.scss';
+import classes from '../../../scss/app/Partners/PartnersList/PartnersList.module.scss';
 
-class PartnersList extends Component {
-
-  state = {
-    
-  }  
-
-
+export default class PartnersList extends Component {
   render() {
     const { partners } = this.props;
-
     return (
       <ul className={classes.partnersList} >
         {
-          partners.map((item, index) => {
-            return <PartnersItem key={index} name={item.name} src={item.logo} />
-          })
+          partners.map((item, index) => 
+            <PartnersItem key={index} 
+              name={item.name} 
+              src={item.logo} 
+            />
+          )
         }
       </ul>
     );
   }
 };
-
-export default PartnersList;
