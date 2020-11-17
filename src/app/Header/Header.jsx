@@ -18,6 +18,7 @@ export default class Header extends Component {
     classAcvtive: '',
     modalAcvtive: '',
   }
+  headerRef = React.createRef()
 
   htmlLock = (bool) => {
     document.documentElement.style.overflow = bool ? 'hidden auto' : 'hidden hidden'; 
@@ -42,21 +43,29 @@ export default class Header extends Component {
     }
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', (e) => {
+      document.documentElement.scrollTop ? 
+      this.headerRef.current.style.backgroundColor = 'white' :
+      this.headerRef.current.style.backgroundColor = 'transparent';
+    })
+  }
+
   render() {
     return (
-      <header id='header'  className={classes.header} >
-        <Form modalFormClicked={() => this.btnGetStartedHeader()} 
+      <header ref={this.headerRef}  className={classes.header} >
+        <Form modalFormClicked={this.btnGetStartedHeader} 
           classModal={'modal'} 
           modalAcvtive={[this.state.modalAcvtive]} 
         />
         <Container assignClasses={['header']}>
           <Logo assignClasses={['header']} />              
-          <Nav modalFormClicked={() => this.btnGetStartedHeader()} 
+          <Nav modalFormClicked={this.btnGetStartedHeader} 
             btn={true} 
             items={this.state.items} 
             assignClasses={['header', this.state.classAcvtive]} 
           />
-          <Burger clicked={() => this.burgerActive()} 
+          <Burger clicked={this.burgerActive} 
             assignClasses={[this.state.classAcvtive]} 
           />
         </Container>
@@ -64,9 +73,3 @@ export default class Header extends Component {
     );
   }
 };
-
-window.addEventListener('scroll', (e) => {
-  document.documentElement.scrollTop ? 
-  document.getElementById('header').style.backgroundColor = 'white' :
-  document.getElementById('header').style.backgroundColor = 'transparent';
-})

@@ -13,6 +13,7 @@
   &.footer {    
     background: url(../../../images/logo-white.svg) center no-repeat;
     margin-bottom: 31px;
+    z-index: 0;
     @media (min-width: 768px) {
       margin: 0 14px 25px 14px;
       width: 20%;

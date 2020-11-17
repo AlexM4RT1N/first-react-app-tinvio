@@ -2,17 +2,13 @@ import React from 'react';
 
 import classes from '../../scss/components/SectionTitle/SectionTitle.module.scss';
 
-const sectionTitle = (props) => {
+const sectionTitle = ({ assignClasses, children }) => {
   const addClasses = [classes.SectionTitle];
-  
-  if(props.assignClasses) {
-    const assignClasses = [...props.assignClasses]
-    assignClasses.forEach((item) => addClasses.push(classes[item]))
-  } 
+  if (assignClasses) assignClasses.forEach((item) => addClasses.push(classes[item]));
 
   return (
     <h2 className={addClasses.join(' ')}>
-      {props.children}
+      {children}
     </h2>
   )
 }

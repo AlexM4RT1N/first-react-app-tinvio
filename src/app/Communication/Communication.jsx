@@ -46,10 +46,10 @@ export default class Communication extends Component {
             Communication
           </SectionTitle>
           <div className={classes.wrapBtn}>
-            <Btn communicationClicked={() => this.before()} text={'BEFORE'} 
+            <Btn communicationClicked={this.before} text={'BEFORE'} 
               assignClasses={['communication', this.state.slide.before]} 
             />          
-            <Btn communicationClicked={() => this.after()} text={'AFTER'} 
+            <Btn communicationClicked={this.after} text={'AFTER'} 
               assignClasses={['communication', this.state.slide.after]} 
             />
           </div>

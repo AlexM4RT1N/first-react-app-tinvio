@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 
 import classes from '../../../scss/app/Hero/BoxesFruits/BoxesFruits.module.scss';
 
-export default class BoxesFruits extends Component {
-  render() {
-    return (
-      <div className={classes.BoxesFruits}>
-        <div className={classes.Boxes}></div>
-        <div className={classes.Fruits}></div>
-      </div>
-    );
-  }
+const boxesFruits = () => {
+  return (
+    <div className={classes.BoxesFruits}>
+      <div className={classes.Boxes}></div>
+      <div className={classes.Fruits}></div>
+    </div>
+  );
 };
+
+export default boxesFruits;

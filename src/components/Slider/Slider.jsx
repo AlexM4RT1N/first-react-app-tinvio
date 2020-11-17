@@ -29,9 +29,11 @@ export default class Slider extends Component {
               className={`${classes.prevSlide} ${currentSlide === 0 ? classes['inactive'] : ''}`}>
             </div>
             <ul className={classes.sliderDots}>
-              <li className={`${classes.dotsItem} ${currentSlide === 0 ? classes['active'] : ''}`}></li>
-              <li className={`${classes.dotsItem} ${currentSlide === 1 ? classes['active'] : ''}`}></li>
-              <li className={`${classes.dotsItem} ${currentSlide === 2 ? classes['active'] : ''}`}></li>
+            {
+              slides.map((slide, index) =>                 
+                <li key={index} className={`${classes.dotsItem} ${currentSlide === index ? classes['active'] : ''}`}></li>
+              )
+            }
             </ul>
             <div onClick={this.nextSlide} 
               className={`${classes.nextSlide} ${currentSlide === slides.length-1 ? classes['inactive'] : ''}`}>

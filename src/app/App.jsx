@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './Header/Header';
 import Hero from './Hero/Hero';
 import Partners from './Partners/Partners';
@@ -11,20 +11,20 @@ import Footer from './Footer/Footer';
 
 import '../scss/app/App.scss';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <Hero />
-        <Partners />
-        <SectionSlider />
-        <Communication />
-        <ScreenMobile />
-        <SimpleSteps />
-        <SectionForm />
-        <Footer />
-      </div>
-    );
-  }
+const app = () => {
+  return (
+    <div className="App">
+      <Header />
+      <Hero />
+      <Partners />
+      <SectionSlider />
+      <Communication />
+      <ScreenMobile />
+      <SimpleSteps />
+      <SectionForm />
+      <Footer />
+    </div>
+  );
 }
+
+export default app;

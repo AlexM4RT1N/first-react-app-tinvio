@@ -2,13 +2,9 @@ import React from "react";
 
 import classes from '../../scss/components/Logo/Logo.module.scss';
 
-const logo = (props) => {
+const logo = ({ assignClasses }) => {
   const addClasses = [classes.appLogo];
-  
-  if(props.assignClasses) {
-    const assignClasses = [...props.assignClasses]
-    assignClasses.map((item) => addClasses.push(classes[item]))
-  } 
+  if (assignClasses) assignClasses.forEach((item) => addClasses.push(classes[item]));
 
   return (
     <a className={addClasses.join(' ')} href="/">

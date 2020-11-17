@@ -2,13 +2,9 @@ import React from 'react';
 
 import classes from '../../scss/components/OverlayWave/OverlayWave.module.scss';
 
-const OverlayWave = (props) => {
+const OverlayWave = ({ assignClasses }) => {
   const addClasses = [classes.OverlayWave];
-  
-  if(props.assignClasses) {
-    const assignClasses = [...props.assignClasses]
-    assignClasses.map((item) => addClasses.push(classes[item]))
-  } 
+  if (assignClasses) assignClasses.forEach((item) => addClasses.push(classes[item]));
 
   return (
     <div className={addClasses.join(' ')}></div>

@@ -37,7 +37,7 @@ export default class Form extends Component {
             </div>
           </div>
           <Btn assignClasses={['form']} text={'Get Started'} />
-          <TextNearBtn  assignClasses={['form']}>No spam, promise 🙌</TextNearBtn>
+          <TextNearBtn  assignClasses={['form']}>No spam, promise <span role="img" aria-label="promise">🙌</span></TextNearBtn>
         </form>
         <div onClick={modalFormClicked} className={classes.closeOverlayModal}></div>
       </div>

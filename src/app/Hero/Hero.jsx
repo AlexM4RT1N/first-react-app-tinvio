@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import OverlayWave from '../../components/OverlayWave/OverlayWave';
 import Container from '../../components/Container/Container';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
@@ -10,28 +10,28 @@ import HomePageImg from './HomePageImg/HomePageImg';
 
 import classes from '../../scss/app/Hero/Hero.module.scss';
 
-export default class Hero extends Component {
-  render() {
-    return (
-      <section className={classes.hero}>
-        <Container assignClasses={['hero']}>
-          <OverlayWave assignClasses={['hero']} />
-          <Subtitle assignClasses={['']}>
-            FOR A SMARTER SUPPLY CHAIN
-          </Subtitle>          
-          <SectionTitle assignClasses={['hero']}>
-            Take your business to the next level with Tinvio’s Supplier Platform
-          </SectionTitle>
-          <a href="#mainForm">
-            <Btn assignClasses={['hero']} text={'Get Started Now'} />
-          </a>
-          <TextNearBtn assignClasses={['hero']}>
-            Yes, it’s free 🎉
-          </TextNearBtn>
-          <BoxesFruits />
-          <HomePageImg />
-        </Container>
-      </section>
-    );
-  }
+const hero = () => {
+  return (
+    <section className={classes.hero}>
+      <Container assignClasses={['hero']}>
+        <OverlayWave assignClasses={['hero']} />
+        <Subtitle assignClasses={['']}>
+          FOR A SMARTER SUPPLY CHAIN
+        </Subtitle>          
+        <SectionTitle assignClasses={['hero']}>
+          Take your business to the next level with Tinvio’s Supplier Platform
+        </SectionTitle>
+        <a href="#mainForm">
+          <Btn assignClasses={['hero']} text={'Get Started Now'} />
+        </a>
+        <TextNearBtn assignClasses={['hero']}>
+          Yes, it’s free <span role="img" aria-label="firecracker">🎉</span>
+        </TextNearBtn>
+        <BoxesFruits />
+        <HomePageImg />
+      </Container>
+    </section>
+  );
 };
+
+export default hero;

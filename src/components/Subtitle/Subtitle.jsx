@@ -2,17 +2,13 @@ import React from 'react';
 
 import classes from '../../scss/components/Subtitle/Subtitle.module.scss';
 
-const subTitle = (props) => {
+const subTitle = ({ assignClasses, children }) => {
   const addClasses = [classes.subtitle];
-  
-  if(props.assignClasses) {
-    const assignClasses = [...props.assignClasses]
-    assignClasses.forEach((item) => addClasses.push(classes[item]))
-  } 
+  if (assignClasses) assignClasses.forEach((item) => addClasses.push(classes[item])); 
 
   return (
     <h3 className={addClasses.join(' ')}>
-      {props.children}
+      {children}
     </h3>
   )
 }
